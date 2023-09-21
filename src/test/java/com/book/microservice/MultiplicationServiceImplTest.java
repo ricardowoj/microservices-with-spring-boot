@@ -1,6 +1,8 @@
 package com.book.microservice;
 
 import com.book.microservice.domain.Multiplication;
+import com.book.microservice.domain.MultiplicationResultAttempt;
+import com.book.microservice.domain.User;
 import com.book.microservice.service.MultiplicationServiceImpl;
 import com.book.microservice.service.RandomGeneratorService;
 import org.junit.Before;
@@ -33,5 +35,14 @@ public class MultiplicationServiceImplTest {
         assertThat(multiplication.getFactorA()).isEqualTo(50);
         assertThat(multiplication.getFactorB()).isEqualTo(30);
         assertThat(multiplication.getResult()).isEqualTo(1500);
+    }
+    
+    @Test
+    public void checkCorrectAttemptTest() {
+        Multiplication multiplication = new Multiplication(50, 60);
+        User user = new User("john_doe");
+        MultiplicationResultAttempt attempt = new MultiplicationResultAttempt(user, multiplication, 3000);
+        boolean attemptResult = multiplicationServiceImpl.checkAttempt(attempt);
+        assertThat(attemptResult).isTrue();
     }
 }

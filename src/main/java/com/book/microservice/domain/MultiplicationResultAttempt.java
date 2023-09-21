@@ -13,9 +13,15 @@ public final class MultiplicationResultAttempt {
     private final Multiplication multiplication;
     private final int resultAttempt;
     
-    MultiplicationResultAttempt() {
+    public MultiplicationResultAttempt() {
         user = null;
         multiplication = null;
         resultAttempt = -1;
+    }
+
+    public MultiplicationResultAttempt(User user, Multiplication multiplication, int resultAttempt) {
+        this.user = user;
+        this.multiplication = multiplication;
+        this.resultAttempt = resultAttempt;
     }
 }

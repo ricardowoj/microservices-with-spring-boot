@@ -10,7 +10,7 @@ import lombok.Setter;
 public class User {
     private final String alias;
     
-    protected User() {
-        alias = null;
+    public User(String johnDoe) {
+        this.alias = johnDoe;
     }
 }
