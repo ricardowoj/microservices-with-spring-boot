@@ -1,4 +1,4 @@
-package com.book.microservice;
+package com.book.microservice.service;
 
 import com.book.microservice.service.RandomGeneratorService;
 import com.book.microservice.service.RandomGeneratorServiceImpl;

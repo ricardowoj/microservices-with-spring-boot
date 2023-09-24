@@ -1,4 +1,4 @@
-package com.book.microservice;
+package com.book.microservice.service;
 
 import com.book.microservice.domain.Multiplication;
 import com.book.microservice.domain.MultiplicationResultAttempt;
