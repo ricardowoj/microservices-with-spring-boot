@@ -1,12 +1,5 @@
 package com.book.microservice.domain;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
-
-@Getter
-@ToString
-@EqualsAndHashCode
 public final class Multiplication {
     private final int factorA;
     private final int factorB;
@@ -20,5 +13,17 @@ public final class Multiplication {
 
     Multiplication() {
         this(0, 0);
+    }
+
+    public int getFactorA() {
+        return factorA;
+    }
+
+    public int getFactorB() {
+        return factorB;
+    }
+
+    public int getResult() {
+        return result;
     }
 }
