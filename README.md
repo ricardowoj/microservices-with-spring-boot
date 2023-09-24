@@ -9,3 +9,4 @@ Ribbon, Zuul and Cucumber.
 - Microservices
 - Test-Driven Development
 - Event-driven architecture
+- jquery
